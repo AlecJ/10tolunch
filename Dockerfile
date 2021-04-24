@@ -3,7 +3,7 @@ FROM node:lts-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
-COPY . .
+COPY ./ui .
 RUN npm run build
 
 # build flask app
